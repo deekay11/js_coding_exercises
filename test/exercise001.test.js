@@ -39,7 +39,12 @@ describe("addVAT", () => {
   });
 
   test("adds a VAT of 17.5% to a price of 33.50", () => {
-    expect(addVAT(33.5, 17.5)).toBe(39.36);
+/*    expect(addVAT(33.5, 17.5)).toBe(39.36);
+    Expected: 39.36
+    Received: 39.3625
+ */
+    expect(addVAT(33.5, 17.5)).toBeCloseTo(39.36);
+   
   });
 
   test("adds a VAT of 0% to a price of 25", () => {
@@ -57,7 +62,14 @@ describe("getSalePrice", () => {
   });
 
   test("reduces a price of 79.99 by 15%", () => {
-    expect(getSalePrice(79.99, 15)).toBe(67.99);
+/*   expect(getSalePrice(79.99, 15)).toBe(66.99);
+       Expected: 67.99
+    Received: 67.9915   */
+
+    expect(getSalePrice(79.99, 15)).toBeCloseTo(67.99);
+
+
+
   });
 
   test("reduces a price of 50 by 0%", () => {
@@ -131,7 +143,12 @@ describe("getMeanScore", () => {
   });
 
   test("returns the mean to 2 decimal places", () => {
-    expect(getMeanScore([24, 44, 56, 11, 12, 17, 34])).toBe(28.29);
+   /*  expect(getMeanScore([24, 44, 56, 11, 12, 17, 34])).toBe(28.29);
+    Expected: 28.29
+    Received: 28.285714285714285 */
+
+    expect(getMeanScore([24, 44, 56, 11, 12, 17, 34])).toBeCloseTo(28.29);
+    
   });
 });
 
