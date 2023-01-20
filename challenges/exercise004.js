@@ -6,7 +6,7 @@ export function findSmallNums(nums) {
 export function findNamesBeginningWith(names, char) {
   if (!names) throw new Error("names is required");
   if (!char) throw new Error("char is required");
-  var result = [];
+  const result = [];
   for (let i = 0; i < names.length; i++) {
     if (names[i].startsWith(char)) {
       result.push(names[i]);
@@ -18,7 +18,7 @@ export function findNamesBeginningWith(names, char) {
 export function findVerbs(words) {
   if (!words) throw new Error("words is required");
   if (!words) throw new Error("words is required");
-  var result = [];
+  const result = [];
   words.forEach(word => {
     if (word.startsWith("to ")) {
       result.push(word);
