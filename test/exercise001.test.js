@@ -62,14 +62,8 @@ describe("getSalePrice", () => {
   });
 
   test("reduces a price of 79.99 by 15%", () => {
-/*   expect(getSalePrice(79.99, 15)).toBe(66.99);
-       Expected: 67.99
-    Received: 67.9915   */
-
+//expect(getSalePrice(79.99, 15)).toBe(66.99); Expected: 67.99     Received: 67.9915 
     expect(getSalePrice(79.99, 15)).toBeCloseTo(67.99);
-
-
-
   });
 
   test("reduces a price of 50 by 0%", () => {
@@ -143,15 +137,10 @@ describe("getMeanScore", () => {
   });
 
   test("returns the mean to 2 decimal places", () => {
-   /*  expect(getMeanScore([24, 44, 56, 11, 12, 17, 34])).toBe(28.29);
-    Expected: 28.29
-    Received: 28.285714285714285 */
-
-    expect(getMeanScore([24, 44, 56, 11, 12, 17, 34])).toBeCloseTo(28.29);
-    
+   // expect(getMeanScore([24, 44, 56, 11, 12, 17, 34])).toBe(28.29); Expected: 28.29 Received: 28.285714285714285 
+    expect(getMeanScore([24, 44, 56, 11, 12, 17, 34])).toBeCloseTo(28.29);  
   });
 });
-
 describe("simpleFizzBuzz", () => {
   test("returns 'fizz' if the number is divisible by 3", () => {
     expect(simpleFizzBuzz(3)).toBe("fizz");
