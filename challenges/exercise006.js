@@ -6,6 +6,7 @@
  */
 export const sumMultiples = (arr) => {
   if (arr === undefined) throw new Error("arr is required");
+  return arr.filter(val => val % 3 === 0 || val % 5 === 0).reduce((a, b) => a + b, 0);
 };
 
 /**
