@@ -4,6 +4,7 @@
  */
 export const sumDigits = (n) => {
   if (n === undefined) throw new Error("n is required");
+  return n.toString().split('').reduce((a, b) => parseInt(a) + parseInt(b), 0);
 };
 
 /**
@@ -17,10 +18,11 @@ export const sumDigits = (n) => {
 export const createRange = (start, end, step) => {
   if (start === undefined) throw new Error("start is required");
   if (end === undefined) throw new Error("end is required");
-  if (step === undefined)
-    console.log(
-      "FYI: Optional step parameter not provided. Remove this check once you've handled the optional step!"
-    );
+  let range = [];
+  for (let i = start; i <= end; i += step) {
+    range.push(i);
+  }
+  return range;
 };
 
 /**
